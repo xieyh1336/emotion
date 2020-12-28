@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_root">
+
+    <View
+        android:id="@+id/v_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:background="#f5f5f5"/>
+
+    <LinearLayout
+        android:id="@+id/ll_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="2dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_message"
+                android:imeOptions="actionSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:inputType="text"
+                android:background="@null"
+                android:hint="输入内容发送"
+                android:minHeight="36dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_emotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="表 情"
+                android:textColor="#000"
+                android:background="#fc8952"
+                android:padding="10dp"
+                android:textSize="11sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_flower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="鲜 花"
+                android:textColor="#000"
+                android:background="#fc8952"
+                android:textSize="11sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_emotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
