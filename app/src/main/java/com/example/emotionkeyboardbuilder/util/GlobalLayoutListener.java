@@ -45,8 +45,9 @@ public class GlobalLayoutListener implements ViewTreeObserver.OnGlobalLayoutList
     private void checkForKeyboardEvents() {
         mView.getRootView().getWindowVisibleDisplayFrame(mVisibleViewArea);
         //noinspection ConstantConditions
-        final int heightDiff =
-                DisplayMetricsHolder.getWindowDisplayMetrics().heightPixels - mVisibleViewArea.bottom;
+//        final int heightDiff =
+//                DisplayMetricsHolder.getWindowDisplayMetrics().heightPixels - mVisibleViewArea.bottom;
+        final int heightDiff = DisplayMetricsHolder.getScreenDisplayMetrics().heightPixels - mVisibleViewArea.bottom;
         if (mKeyboardHeight != heightDiff && heightDiff > mMinKeyboardHeightDetected) {
             // keyboard is now showing, or the keyboard height has changed
             mKeyboardHeight = heightDiff;
